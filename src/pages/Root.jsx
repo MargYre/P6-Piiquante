@@ -6,6 +6,8 @@ import Footer from '../composants/Footer';
 
 export default function Root() {
   return (
-    <div><Header/><Outlet/><Footer/></div>
+    <div><Header/>
+    <main className='container'><Outlet/></main>
+    <Footer/></div>
   )
 }
