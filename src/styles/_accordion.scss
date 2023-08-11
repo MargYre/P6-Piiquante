@@ -1,0 +1,58 @@
+.accordion {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &-header {
+        border-radius: 5px;
+        background: #FF6060;
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 142.6%;
+        border: none;
+        padding-inline: 18px;
+        padding-top: 6px;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: url("./arrow-down.png");
+            //content: '\003c';
+            position: absolute;
+            top: 6px;
+
+            right: 18px;
+            transform-origin: 50% 35%;
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    .accordion-content {
+        border-radius: 0 0 5px 5px;
+        background: #F6F6F6;
+
+        color: #FF6060;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 142.6%;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+
+        p {
+            padding: 18px 36px;
+        }
+    }
+
+
+    &.open {
+        .accordion-header {
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

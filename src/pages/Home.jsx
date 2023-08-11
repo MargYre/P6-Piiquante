@@ -8,7 +8,7 @@ export default function Home() {
     <>
           <BannerHome/>
             <div className="card-logements">
-              {Logements.map(l=><CardLogement title={l.title} image={l.cover}/>)}
+              {Logements.map(l=><CardLogement title={l.title} image={l.cover} id={l.id} key={l.id}/>)}
             </div>
     </>
   )

@@ -5,6 +5,7 @@ import './styles/index.scss'
 import About from './pages/About'
 import Root from './pages/Root'
 import ErrorPage from './pages/ErrorPage'
+import Logement from './pages/Logement'
 
 import {
   createBrowserRouter,
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
       path: "/about",
       element: <About/>,
+    },
+    {
+      path: "/logements/:logementId",
+      element: <Logement/>,
     }]
   }
 ]);

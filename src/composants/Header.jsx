@@ -6,8 +6,8 @@ export default function Header() {
     <header className="container">
       <img src={logo} alt="" className="logo" />
       <nav>
-        <Link to={`/`}>Home</Link>
-        <Link to={`/about`}>About</Link>
+        <Link to={`/`}>Accueil</Link>
+        <Link to={`/about`}>A Propos</Link>
       </nav>
     </header>
     //props
