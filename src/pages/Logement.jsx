@@ -11,18 +11,18 @@ export default function Logement()
     //'/path/to/image3.jpg',
     // ... more image paths
   ];
-  const [activeIndex, setActiveIndex] = useState(0); // By default, the first image is active
+  //const [activeIndex, setActiveIndex] = useState(0); // By default, the first image is active
   return (
     <div>
       Logement {logementId}
-      {/*  */}
+      {/*  
       {activeIndex > 0 && <button onClick={() => setActiveIndex(activeIndex - 1)}>←</button>}
             
             {images.map((src, index) => (
                 <Accordion key={index} imageSrc={src} open={index === activeIndex} />
             ))}
 
-            {activeIndex < images.length - 1 && <button onClick={() => setActiveIndex(activeIndex + 1)}>→</button>}
+            {activeIndex < images.length - 1 && <button onClick={() => setActiveIndex(activeIndex + 1)}>→</button>}*/}
     </div>
 
   )
