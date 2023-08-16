@@ -1,29 +1,25 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import Accordion from '../composants/accordion';
+import Gallery from '../composants/Gallery'; // Assurez-vous que ce chemin est correct
+import bannerAbout from '../images/banner-about.png';
+import bannerHome from '../images/banner-home.png';
+import logoFooter from '../images/logo-footer.png';
 
 export default function Logement() 
 {
-  const {logementId}=useParams();
-  const images = [
-    '../images/banner-about.png',
-    '../images/banner-home.png',
-    //'/path/to/image3.jpg',
-    // ... more image paths
-  ];
-  //const [activeIndex, setActiveIndex] = useState(0); // By default, the first image is active
-  return (
-    <div>
-      Logement {logementId}
-      {/*  
-      {activeIndex > 0 && <button onClick={() => setActiveIndex(activeIndex - 1)}>←</button>}
-            
-            {images.map((src, index) => (
-                <Accordion key={index} imageSrc={src} open={index === activeIndex} />
-            ))}
+    const { logementId } = useParams();
 
-            {activeIndex < images.length - 1 && <button onClick={() => setActiveIndex(activeIndex + 1)}>→</button>}*/}
-    </div>
+    const logementImages = [
+        bannerAbout,
+        bannerHome,
+        logoFooter
+    ];
 
-  )
+    return (
+        <div>
+            Logement {logementId}
+            <Gallery images={logementImages} />
+        </div>
+    );
 }
