@@ -1,0 +1,21 @@
+.error-message {
+    color: #FF6060;
+    font-family: Montserrat;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex; // pour activer justify-content
+    flex-direction: column; // pour garder les éléments en colonne
+
+    h1 {
+        font-size: 14vw;
+        margin-right: 58px; 
+        margin-left: 58px;
+    }
+    p {
+        margin-right: 58px; 
+        margin-left: 58px; 
+        font-size: 36px;
+    }
+}
