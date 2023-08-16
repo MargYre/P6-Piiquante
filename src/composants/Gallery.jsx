@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import arrowLeft from '../images/arrow-left.png';
+import arrowRight from '../images/arrow-right.png';
 
 function Gallery({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,13 +28,17 @@ function Gallery({ images }) {
     return (
         <div className="gallery-container">
             {images.length > 1 && (
-                <button className="arrow prev" onClick={goToPreviousImage}>&lt;</button>
+                <button className="arrow prev" onClick={goToPreviousImage}>
+                    <img src={arrowLeft} alt="Next" />
+                </button>
             )}
 
             <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} style={{ objectFit: 'cover' }} />
 
             {images.length > 1 && (
-                <button className="arrow next" onClick={goToNextImage}>&gt;</button>
+                <button className="arrow next" onClick={goToNextImage}>
+                    <img src={arrowRight} alt="Next" />
+                </button>
             )}
         </div>
     );
