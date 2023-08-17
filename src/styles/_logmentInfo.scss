@@ -1,0 +1,12 @@
+.logement-info {
+    color: #FF6060;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+    }
+}

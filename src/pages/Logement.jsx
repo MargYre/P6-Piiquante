@@ -22,10 +22,17 @@ export default function Logement()
         <div>
             Logement {logementId}
             <Gallery images={logementImages} />
-            {/* <h2>{Logements.map()} { logementTitle }</h2> */}
-            {/* {Logements.map(l => <div key={l.id}>{l.title}</div>)} */}
-            <h1>{Logements.find(l => l.id === logementId)?.title}</h1>
-            <p>{Logements.find(l => l.id === logementId)?.location}</p>
+            <div className='logement-info'>
+                <div>
+                    <h1>{Logements.find(l => l.id === logementId)?.title}</h1>
+                    <p>{Logements.find(l => l.id === logementId)?.location}</p>
+                    <p>{Logements.find(l => l.id === logementId)?.tags}</p>
+                </div>
+                <div>
+                    <p>{Logements.find(l => l.id === logementId)?.host.name}</p>
+                    <img src={Logements.find(l => l.id === logementId)?.host.picture} alt="Photo de profil du propriétaire du logement" />
+                </div>
+            </div>
         </div>
     );
 }
