@@ -1,8 +1,11 @@
 .logement-info {
     color: #FF6060;
     font-family: Montserrat;
-    display: flex;
-    justify-content: space-between;
+
+    .side-by-side {
+        display: flex;
+        justify-content: space-between;
+    }
 
     img {
         width: 64px;
