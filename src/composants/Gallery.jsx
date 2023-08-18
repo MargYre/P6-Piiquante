@@ -40,6 +40,7 @@ function Gallery({ images }) {
                     <img src={arrowRight} alt="Next" />
                 </button>
             )}
+            <div className='number-image'>{currentIndex +1 }/{images.length}</div>
         </div>
     );
 }

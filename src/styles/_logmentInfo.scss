@@ -5,11 +5,28 @@
     .side-by-side {
         display: flex;
         justify-content: space-between;
+        gap: 56px;
+        flex-wrap: wrap;
     }
 
     img {
         width: 64px;
         height: 64px;
         flex-shrink: 0;
+        border-radius: 50%;
+    }
+    .host-name {
+        width: 100px;
+        text-align: right;
+    }
+    .tags {
+        display: flex;
+        gap: 10px;
+        span {
+            border-radius: 10px;
+            background: #FF6060;
+            color: white;
+            padding: 3px 40px;
+        }
     }
 }

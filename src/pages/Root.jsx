@@ -7,7 +7,9 @@ import Footer from '../composants/Footer';
 export default function Root() {
   return (
     <div><Header/>
-    <main className='container'><Outlet/></main>
+    <main className='container'>
+      <Outlet/>
+    </main>
     <Footer/></div>
   )
 }
