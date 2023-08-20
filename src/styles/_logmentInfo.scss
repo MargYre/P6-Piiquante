@@ -6,7 +6,11 @@
         display: flex;
         justify-content: space-between;
         gap: 56px;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
+        
+        p {
+            align-items: center;
+        }
     }
 
     img {
@@ -15,9 +19,15 @@
         flex-shrink: 0;
         border-radius: 50%;
     }
-    .host-name {
-        width: 100px;
-        text-align: right;
+    .host-container {
+        display: flex;
+        align-items: center; // Pour aligner verticalement le texte et l'image si nécessaire
+    
+        .host-name {
+            margin-right: 10px; // Vous pouvez ajuster cette valeur selon vos besoins
+            max-width: 80px;
+            text-align: right;
+        }
     }
     .tags {
         display: flex;
@@ -27,6 +37,26 @@
             background: #FF6060;
             color: white;
             padding: 3px 40px;
+        }
+    }
+    .rating {
+        display: flex;
+        justify-content: flex-end;
+        margin: 3px;
+    }
+    .accordion {
+        margin-top: 10px;
+    }
+    @media (max-width: 600px) {
+        .side-by-side, .tags {
+            flex-wrap: wrap;
+        }
+        .host-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .rating {
+            justify-content: left;
         }
     }
 }

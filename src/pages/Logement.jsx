@@ -23,15 +23,22 @@ export default function Logement()
                     <div>
                         <h1>{currentLogement.title}</h1>
                         <p>{currentLogement.location}</p>
-                        <p className='tags'>{currentLogement.tags.map(t => <span>{t}</span>)}</p>
+                        
                     </div>
-                    <div>
+                    <div className="host-container">
                         <p className='host-name'>{currentLogement.host.name}</p>
                         <img src={currentLogement.host.picture} alt="Photo de profil du propriétaire du logement" />
-                        <Rating rating = {currentLogement.rating}/>
                     </div>
                 </div>
                 <div className='side-by-side'>
+                    <p className='tags'>{currentLogement.tags.map(t => <span>{t}</span>)}</p>
+                    <div className='rating'>
+                        <Rating rating = {currentLogement.rating}/>
+                    </div>   
+                </div>
+                
+                    
+                <div className='side-by-side accordion'>
                     <Accordion title="Description" content={currentLogement.description}/>
                     <Accordion title="Équipements" content={currentLogement.equipments}/>
                 </div>
