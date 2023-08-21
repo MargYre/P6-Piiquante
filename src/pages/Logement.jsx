@@ -16,7 +16,6 @@ export default function Logement()
 
     return (
         <div>
-            Logement {logementId}
             <Gallery images={currentLogement.pictures} />
             <div className='logement-info'>
                 <div className='side-by-side'>
@@ -34,6 +33,10 @@ export default function Logement()
                     <p className='tags'>{currentLogement.tags.map(t => <span>{t}</span>)}</p>
                     <div className='rating'>
                         <Rating rating = {currentLogement.rating}/>
+                    </div>
+                    <div className="host-container-mobile">
+                        <p className='host-name'>{currentLogement.host.name}</p>
+                        <img src={currentLogement.host.picture} alt="Photo de profil du propriétaire du logement" />
                     </div>   
                 </div>
                 

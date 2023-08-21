@@ -1,13 +1,14 @@
 .logement-info {
     color: #FF6060;
     font-family: Montserrat;
+    margin-top: 30px;
 
     .side-by-side {
         display: flex;
         justify-content: space-between;
         gap: 56px;
         //flex-wrap: wrap;
-        
+
         p {
             align-items: center;
         }
@@ -28,6 +29,9 @@
             max-width: 80px;
             text-align: right;
         }
+    }
+    .host-container-mobile {
+        display: none;
     }
     .tags {
         display: flex;
@@ -52,8 +56,15 @@
             flex-wrap: wrap;
         }
         .host-container {
+            display: none;
+            /*display: flex;
+            justify-content: flex-end;*/
+        }
+        .host-container-mobile {
             display: flex;
-            justify-content: flex-end;
+            .host-name {
+                max-width: 70px;
+            }
         }
         .rating {
             justify-content: left;
