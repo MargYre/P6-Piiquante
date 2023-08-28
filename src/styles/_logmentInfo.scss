@@ -3,6 +3,11 @@
     font-family: Montserrat;
     margin-top: 30px;
 
+    h1{
+        font-size: 36px;
+        font-weight: normal;
+    }
+
     .side-by-side {
         display: flex;
         justify-content: space-between;
@@ -36,6 +41,7 @@
     .tags {
         display: flex;
         gap: 10px;
+        margin-top: 20px;
         span {
             border-radius: 10px;
             background: #FF6060;
@@ -56,9 +62,15 @@
             flex-wrap: wrap;
         }
         .host-container {
-            display: none;
+            //display: none;
             /*display: flex;
             justify-content: flex-end;*/
+        }
+        .host-info {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 100%;
         }
         .host-container-mobile {
             display: flex;

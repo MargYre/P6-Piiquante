@@ -34,4 +34,10 @@
         font-weight: 500;
         line-height: 142.6%; /* 25.668px */
     }
+    
 }
+@media (max-width: 600px) {
+        .gallery-container {
+            height: 255px;
+        }
+    }
